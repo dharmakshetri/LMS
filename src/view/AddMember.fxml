@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="490.0" prefWidth="630.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.AddUserController">
+  <children>
+    <Pane layoutX="2.0" layoutY="50.0" prefHeight="439.9999000000025" prefWidth="630.0">
+      <children>
+        <Text layoutX="71.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cssLbl" text="Last Name :" />
+        <Text layoutX="71.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cssLbl" text="Member ID :" />
+        <Text layoutX="71.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cssLbl" text="Phone Number :" />
+        <Text layoutX="374.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cssLbl" text="Street :" />
+        <Text layoutX="374.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cssLbl" text="City :" />
+        <Text layoutX="374.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cssLbl" text="State :" />
+        <Text layoutX="374.0" layoutY="226.0" scaleX="1.0" scaleY="1.0000076480665687" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cssLbl" text="Zip :" />
+        <Text layoutX="71.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cssLbl" text="First Name :" />
+        <TextField fx:id="txtFName" layoutX="170.0" layoutY="57.0" prefHeight="32.0507728027369" promptText="First Name" styleClass="cssTf" />
+        <TextField fx:id="txtLName" layoutX="171.0" layoutY="104.0" prefHeight="32.05078125" promptText="Last Name" styleClass="cssTf" />
+        <TextField fx:id="txtMemId" layoutX="173.0" layoutY="153.0" prefHeight="32.05078125" prefWidth="144.5078125" promptText="Member ID" styleClass="cssTf" />
+        <TextField fx:id="txtPhone" layoutX="174.0" layoutY="205.0" prefHeight="32.0507896972631" prefWidth="144.5078125" promptText="Phone Number" styleClass="cssTf" />
+        <TextField fx:id="txtStreet" layoutX="439.0" layoutY="54.0" prefHeight="32.05078125" prefWidth="110.0" promptText="Street" styleClass="cssTf" />
+        <TextField fx:id="txtCity" layoutX="439.0" layoutY="102.0" prefHeight="32.05078125" prefWidth="110.0" promptText="City" styleClass="cssTf" />
+        <TextField fx:id="txtState" layoutX="439.0" layoutY="153.0" prefHeight="32.05078125" prefWidth="110.0" promptText="State" styleClass="cssTf" />
+        <TextField fx:id="txtZip" layoutX="439.0" layoutY="205.0" prefHeight="32.05078125" prefWidth="110.0" promptText="Zip" styleClass="cssTf" />
+        <Label layoutX="65.0" layoutY="22.0" text="* All Fields are mendatory" />
+        <Label layoutX="315.0" layoutY="65.0" prefWidth="25.306640625" text="*" />
+        <Label layoutX="316.0" layoutY="112.0" prefWidth="25.306640625" text="*" />
+        <Label layoutX="549.0" layoutY="213.0" prefWidth="25.306640625" text="*" />
+        <Label layoutX="549.0" layoutY="161.0" prefWidth="25.306640625" text="*" />
+        <Label layoutX="549.0" layoutY="110.0" prefWidth="25.306640625" text="*" />
+        <Label layoutX="549.0" layoutY="62.0" prefWidth="25.306640625" text="*" />
+        <Label layoutX="320.0" layoutY="213.0" prefWidth="25.306640625" text="*" />
+        <Label layoutX="318.0" layoutY="161.0" prefWidth="25.306640625" text="*" />
+        <Pane layoutX="0.0" layoutY="409.0" prefHeight="31.0" prefWidth="629.9999389648438">
+          <children>
+            <Label layoutX="10.0" layoutY="8.0" text="Copyright @ Nepal Group 2: Library Management System">
+              <font>
+                <Font name="System Bold Italic" size="12.0" />
+              </font>
+            </Label>
+          </children>
+        </Pane>
+      </children>
+    </Pane>
+    <Label fx:id="lblWarning" layoutX="68.0" layoutY="350.0" prefHeight="46.0" prefWidth="149.0" textFill="#e13232" />
+    <Button fx:id="btnAdd" layoutX="263.0" layoutY="361.0" mnemonicParsing="false" onAction="#addMember" prefHeight="32.05078125" prefWidth="92.0" styleClass="cssBtn" text="Add Member" />
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="50.0" prefWidth="629.9999000000025" styleClass="cssAdminHeader">
+      <children>
+        <Label layoutX="226.0" layoutY="13.0" styleClass="cssLblAdminHeader" text="Member Registration" textAlignment="CENTER" />
+      </children>
+    </Pane>
+  </children>
+</Pane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.CheckOutController">
+  <top>
+    <Pane prefHeight="578.0" prefWidth="708.0" styleClass="cssPane" BorderPane.alignment="CENTER">
+      <children>
+        <Pane layoutX="0.0" layoutY="53.0" prefHeight="72.0" prefWidth="708.0" />
+        <Button fx:id="btn_Search" layoutX="605.0" layoutY="83.0" mnemonicParsing="false" onAction="#onBtnSearch" prefHeight="28.0" prefWidth="80.0" styleClass="cssBtn" text="Search" />
+        <TextField fx:id="tf_memberID" layoutX="32.0" layoutY="86.0" prefHeight="28.9609375" promptText="Member ID" styleClass="cssTf" />
+        <TextField fx:id="tf_ISBN" layoutX="235.0" layoutY="86.0" prefHeight="28.0" promptText="ISBN" styleClass="cssTf" />
+        <Label fx:id="lbl_memberID" layoutX="32.0" layoutY="66.0" styleClass="cssLbl" text="Member ID" />
+        <Label fx:id="lbl_ISBN" layoutX="235.0" layoutY="66.0" styleClass="cssLbl" text="ISBN" />
+        <TableView fx:id="tbl_checkoutRecord" layoutX="32.0" layoutY="246.0" prefHeight="250.0" prefWidth="654.0" styleClass="cssTbl">
+          <columns>
+            <TableColumn prefWidth="90.0" text="ISBN" fx:id="cISBN" />
+            <TableColumn prefWidth="154.0" text="Book Title" fx:id="cBookTitle" />
+            <TableColumn prefWidth="177.0" text="Author's Name" fx:id="cAuthor" />
+            <TableColumn prefWidth="136.0" text="No of Available Book" fx:id="cAvailable" />
+            <TableColumn prefWidth="96.0" text="Check Out Days" fx:id="cCheckout" />
+          </columns>
+        </TableView>
+        <Pane fx:id="pane_memberInfo" layoutX="33.0" layoutY="157.0" prefHeight="88.0" prefWidth="652.0" style="-fx-background-color: azure;" styleClass="cssPane">
+          <children>
+            <Label fx:id="lbl_memberFullName" layoutX="2.0" layoutY="12.0" styleClass="cssLbl" text="Full Name :" />
+            <Label fx:id="lbl_memberName" layoutX="71.0" layoutY="12.0" text="full name" />
+            <Label fx:id="lbl_phone" layoutX="326.0" layoutY="21.0" styleClass="cssLbl" text="Phone :" />
+            <Label fx:id="lbl_phoneNo" layoutX="371.0" layoutY="21.0" text="phone number" />
+            <Label fx:id="lbl_address" layoutX="3.0" layoutY="39.0" styleClass="cssLbl" text="Address :" />
+            <Label fx:id="lbl_street" layoutX="72.0" layoutY="39.0" text="street" />
+            <Label fx:id="lbl_cityState" layoutX="72.0" layoutY="58.0" text="city, state" />
+            <Label layoutX="-3.0" layoutY="-28.0" text="Member Details" underline="true" wrapText="false">
+              <font>
+                <Font name="System Bold Italic" size="16.0" />
+              </font>
+            </Label>
+          </children>
+        </Pane>
+        <Button fx:id="btnCheckOut" layoutX="605.0" layoutY="506.0" mnemonicParsing="false" onAction="#onBtnCheckOut" prefHeight="28.9609375" prefWidth="80.0" styleClass="cssBtn" text="Check Out" />
+        <Pane layoutX="0.0" layoutY="0.0" prefHeight="53.0" prefWidth="708.0" styleClass="cssAdminHeader">
+          <children>
+            <Label layoutX="272.0" layoutY="14.0" styleClass="cssLblAdminHeader" text="Book Checkout Record" />
+          </children>
+        </Pane>
+      </children>
+    </Pane>
+  </top>
+</BorderPane>

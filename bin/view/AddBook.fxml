@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="548.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.AddBookController">
+  <children>
+    <Pane layoutX="6.0" layoutY="5.0" prefHeight="515.0" prefWidth="644.0">
+      <children>
+        <Pane layoutX="-6.0" layoutY="222.0" prefHeight="294.000022070315" prefWidth="650.0" styleClass="cssAuthorPane">
+          <children>
+            <Label layoutX="51.0" layoutY="-2.0" styleClass="cssLblHeader" text="Author Details" />
+            <Button fx:id="btnAddAuthor" layoutX="286.0" layoutY="189.0" minHeight="16.0001220703125" mnemonicParsing="false" onAction="#addAuthor" prefHeight="23.0001220703125" prefWidth="101.0" styleClass="cssBtn" text="Add Author" />
+          </children>
+        </Pane>
+        <Pane layoutX="-6.0" layoutY="42.0" prefHeight="179.0" prefWidth="650.0" styleClass="cssBookPane">
+          <children>
+            <Label layoutX="335.0" layoutY="40.0" styleClass="cssLbl" text="ISBN :" />
+            <TextField fx:id="txtISBN" layoutX="438.0" layoutY="32.0" prefHeight="31.0" prefWidth="129.00002207031503" promptText="ISBN" styleClass="null" />
+            <Label layoutX="53.0" layoutY="76.0" prefWidth="103.99990844726562" styleClass="cssLbl" text="No. of Copies :" />
+            <TextField fx:id="txtNoOfCopy" layoutX="174.0" layoutY="72.0" prefHeight="31.0" prefWidth="144.0" promptText="Number of Copies" />
+            <Label layoutX="335.0" layoutY="76.0" styleClass="cssLbl" text="Checkout Length :" />
+            <TextField fx:id="txtCheckOut" layoutX="438.0" layoutY="70.0" prefHeight="31.0" prefWidth="129.0" promptText="Max length" />
+            <Label layoutX="53.0" layoutY="0.0" styleClass="cssLblHeader" text="Book Details" />
+          </children>
+        </Pane>
+        <Label layoutX="47.0" layoutY="80.0" styleClass="cssLbl" text="Book Title :" />
+        <TextField fx:id="txtTitle" layoutX="168.0" layoutY="73.0" prefHeight="31.0" prefWidth="142.5078125" promptText="Book Title" styleClass="null" />
+        <Label layoutX="47.0" layoutY="163.0" styleClass="cssLbl" text="Description :" />
+        <TextArea fx:id="txtDescription" layoutX="168.0" layoutY="152.0" prefHeight="54.0" prefWidth="395.5078125" styleClass="cssTf" />
+        <Button fx:id="lblSubmit" layoutX="489.0" layoutY="439.0" mnemonicParsing="false" onAction="#addBook" prefHeight="31.000099999997474" prefWidth="76.0" styleClass="cssBtn" text="Submit" />
+        <Label fx:id="lblMessage" layoutX="225.0" layoutY="271.0" />
+        <TextField fx:id="txtFname" layoutX="168.0" layoutY="254.0" prefHeight="31.0" prefWidth="142.5078125" promptText="First Name" />
+        <Label layoutX="46.0" layoutY="262.0" styleClass="cssLbl" text="First Name :" />
+        <Label fx:id="lblAuthors" layoutX="50.0" layoutY="429.0" prefHeight="63.0" prefWidth="173.0" />
+        <Label layoutX="48.0" layoutY="400.0" styleClass="cssLbl" text="Author(s)" />
+        <Pane layoutX="-3.0" layoutY="-3.0" prefHeight="42.0" prefWidth="650.0" styleClass="cssAdminHeader">
+          <children>
+            <Label layoutX="247.0" layoutY="6.0" styleClass="cssLblAdminHeader" text="Book Management" />
+          </children>
+        </Pane>
+      </children>
+    </Pane>
+    <Label layoutX="51.0" layoutY="311.0" styleClass="cssLbl" text="Last Name :" />
+    <TextField fx:id="txtLname" layoutX="174.0" layoutY="301.0" prefHeight="31.0" promptText="Last Name" />
+    <Label layoutX="52.0" layoutY="345.0" styleClass="cssLbl" text="Mobile :" />
+    <TextField fx:id="txtMobile" layoutX="174.0" layoutY="339.0" prefHeight="31.0" promptText="Mobile" />
+    <TextField fx:id="txtCredential" layoutX="174.0" layoutY="374.0" prefHeight="31.0" promptText="Credential" />
+    <Label layoutX="52.0" layoutY="378.0" styleClass="cssLbl" text="Credential :" />
+    <Label layoutX="367.0" layoutY="383.0" styleClass="cssLbl" text="Zip :" />
+    <TextField fx:id="txtZip" layoutX="426.0" layoutY="380.0" prefHeight="31.0" promptText="Zip" />
+    <TextField fx:id="txtState" layoutX="426.0" layoutY="339.0" prefHeight="31.0" promptText="State" />
+    <Label layoutX="363.0" layoutY="346.0" styleClass="cssLbl" text="State :" />
+    <TextField fx:id="txtStreet" layoutX="426.0" layoutY="298.0" prefHeight="31.0" promptText="Street" />
+    <Label layoutX="362.0" layoutY="303.0" styleClass="cssLbl" text="Street :" />
+    <Label layoutX="363.0" layoutY="260.0" styleClass="cssLbl" text="City :" />
+    <TextField fx:id="txtCity" layoutX="425.0" layoutY="256.0" prefHeight="31.0" promptText="City" />
+    <Pane layoutX="0.0" layoutY="517.0" prefHeight="31.0" prefWidth="629.9999389648438">
+      <children>
+        <Label layoutX="10.0" layoutY="8.0" text="Copyright @ Nepal Group 2: Library Management System">
+          <font>
+            <Font name="System Bold Italic" size="12.0" />
+          </font>
+        </Label>
+      </children>
+    </Pane>
+  </children>
+</Pane>

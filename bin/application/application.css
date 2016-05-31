@@ -1,0 +1,77 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.cssLoginPane{
+    -fx-background-image: url("/images/loginimage.jpg");
+}
+.cssLoginHeader{-fx-background-color: linear-gradient(#61a2b1, #2A5058);}
+.cssLblLoginHeader{
+	-fx-font-size: 20.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,0.5) , 0.0,0.0,0.0,1.0 );
+}
+.cssLoginInner{
+	-fx-background-color: linear-gradient(#4D6257, #2A5058);
+}
+.cssHeader{
+	-fx-font-size: 20.0px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,0.5) , 0.0,0.0,0.0,1.0 );
+}
+/*Admin Dashboard */
+.cssAdminHeader{
+	-fx-background-color: linear-gradient(#61a2b1, #2A5058);
+}
+.cssBtn,.cssBtnAdmin {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 );
+}
+.cssBtn:hover,.cssBtnAdmin:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+.cssAdminPaneLeft{-fx-background-color: linear-gradient(#4D6257, #2A5058);}
+.cssLblAdminHeader{
+	-fx-font-size: 20.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,0.5) , 0.0,0.0,0.0,1.0 );
+}
+.cssAdminPane
+{
+	-fx-background-image: url("/images/adminbackground.jpg");
+}
+/*Add member  */
+.cssLbl {
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    /*-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );*/
+}
+.cssTf {
+   /* -fx-background-color: #a9a9a9 , #B9DEE7 , #B9DEE7;*/
+    -fx-background-insets: 0.0 -1.0 -1.0 -1.0, 0.0 0.0 0.0 0.0, 0.0 -1.0 3.0 -1.0;
+}
+
+.cssTf:focused {
+    -fx-background-color: #a9a9a9 , #B9DEE7 , #B9DEE7;
+    -fx-background-insets: 0.0 -1.0 -1.0 -1.0, 0.0 0.0 0.0 0.0, 0.0 -1.0 3.0 -1.0;
+}
+/*Book form */
+.cssBookPane{
+-fx-background-color: linear-gradient(#70C5EC);
+fx-border-radius:5.0,5.0,5.0,5.0;
+}
+.cssAuthorPane{
+	-fx-background-color: linear-gradient(#70C5EC);
+fx-border-radius:5.0,5.0,5.0,5.0;
+}
+.cssLblHeader{
+	 -fx-font-size: 18.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+.cssTA{-fx-font-size: 14.0px;
+    -fx-font-weight: bold;-fx-text-fill: black;
+    }
