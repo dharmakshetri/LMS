@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.Library;
+import common.DataHelper;
 import enums.Role;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,10 +42,10 @@ public class HomePageController implements Initializable {
 			btnAddBook.setDisable(true);
 			btnAddBookCopy.setDisable(true);
 			btnAddMember.setDisable(true);
-			welcomeLBL.setText("Welcome, Access Level [" + Role.LIBRARIAN.toString() + "]");
+			welcomeLBL.setText("Welcome, System Access Level [" + Role.LIBRARIAN.toString() + "]");
 
 		} else {
-			welcomeLBL.setText("Welcome, Access Level [" + Role.BOTH.toString() + "]");
+			welcomeLBL.setText("Welcome, System Access Level [" + Role.BOTH.toString() + "]");
 		}
 
 	}
@@ -53,7 +54,7 @@ public class HomePageController implements Initializable {
 	public void addMember() {
 		try {
 			Pane root = FXMLLoader.load((getClass().getResource("/view/AddMember.fxml")));
-			Scene scene = new Scene(root);
+			Scene scene = new Scene(root, DataHelper.MAIN_WINDOW_WIDTH, DataHelper.MAIN_WINDOW_HEIGHT);
 			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);
@@ -68,7 +69,7 @@ public class HomePageController implements Initializable {
 	public void addBook() {
 		try {
 			Pane root = FXMLLoader.load((getClass().getResource("/view/AddBook.fxml")));
-			Scene scene = new Scene(root);
+			Scene scene = new Scene(root, DataHelper.MAIN_WINDOW_WIDTH, DataHelper.MAIN_WINDOW_HEIGHT);
 			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);
@@ -83,7 +84,7 @@ public class HomePageController implements Initializable {
 	public void addBookCopy() {
 		try {
 			Pane root = FXMLLoader.load((getClass().getResource("/view/AddBookCopy.fxml")));
-			Scene scene = new Scene(root);
+			Scene scene = new Scene(root, DataHelper.MAIN_WINDOW_WIDTH, DataHelper.MAIN_WINDOW_HEIGHT);
 			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);
@@ -98,7 +99,7 @@ public class HomePageController implements Initializable {
 	public void checkOutBook() {
 		try {
 			Pane root = FXMLLoader.load((getClass().getResource("/view/CheckOutRecord.fxml")));
-			Scene scene = new Scene(root);
+			Scene scene = new Scene(root, DataHelper.MAIN_WINDOW_WIDTH, DataHelper.MAIN_WINDOW_HEIGHT);
 			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);

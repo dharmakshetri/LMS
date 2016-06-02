@@ -2,6 +2,7 @@ package controller;
 
 import enums.Role;
 import application.Library;
+import bInterface.OnLoginSuccessListener;
 import dataservice.UserDataAccess;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -27,6 +28,8 @@ public class LogInController {
 	private TextField txtusername;
 	@FXML
 	private PasswordField txtpassword;
+	
+	 private OnLoginSuccessListener onLoginSuccessListener;
 
 	public LogInController() {
 
@@ -47,14 +50,15 @@ public class LogInController {
 			if (result != null) {
 				try {
 					role = result.getRole();
-					Pane root = FXMLLoader.load((getClass().getResource("/view/homepage.fxml")));
+					/*Pane root = FXMLLoader.load((getClass().getResource("/view/homepage.fxml")));
 					Scene scene = new Scene(root);
 					scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 					Stage stage = new Stage();
 					stage.setScene(scene);
 					stage.setTitle("HomePage");
 					stage.show();
-					Library.loginStage.close();
+					Library.loginStage.close();*/
+					loadHomeScreen();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -82,4 +86,14 @@ public class LogInController {
 		return true;
 	}
 
+	
+	private void loadHomeScreen() {
+        onLoginSuccessListener.onLoginSuccess();
+
+    }
+
+    @FXML
+    public void initialize(OnLoginSuccessListener onLoginSuccessListener) {
+        this.onLoginSuccessListener = onLoginSuccessListener;
+    }
 }

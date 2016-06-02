@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<Pane prefHeight="490.0000999999975" prefWidth="630.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.AddBookCopyController">
+<Pane prefHeight="490.0000999999975" prefWidth="630.0000999999975" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBookCopyController">
   <children>
     <Button fx:id="btnSearch" layoutX="347.0" layoutY="95.0" mnemonicParsing="false" onAction="#searchISBN" prefHeight="25.0" prefWidth="65.0" styleClass="cssBtn" text="Search" />
     <Label layoutX="92.0" layoutY="99.0" text="ISBN :" />
     <TextField fx:id="txtISBN" layoutX="142.0" layoutY="95.0" prefHeight="30.0" promptText="ISBN" styleClass="cssTf" />
     <Button fx:id="btnAddCopies" layoutX="327.0" layoutY="354.0" mnemonicParsing="false" onAction="#addCopies" prefHeight="30.0" prefWidth="95" styleClass="cssBtn" text="Add Copies" />
-    <Label layoutX="107.0" layoutY="360.0" text="Number of Copies :" />
-    <TextField fx:id="txtNumOfCopies" layoutX="218.0" layoutY="356.0" prefHeight="30.0" prefWidth="65.0" promptText="Copies No." styleClass="cssTf" />
+    <Label layoutX="90.0" layoutY="360.0" prefHeight="15.0" prefWidth="142.0" text="Number of Copies :" />
+    <TextField fx:id="txtNumOfCopies" layoutX="218.0" layoutY="356.0" prefHeight="30.0" prefWidth="87.0" promptText="Copies No." styleClass="cssTf" />
     <TextArea fx:id="taDisplay" disable="true" layoutX="92.0" layoutY="179.0" prefHeight="129.0" prefWidth="320.0" styleClass="cssTA" />
     <Pane layoutX="0.0" layoutY="0.0" prefHeight="42.0" prefWidth="630.0" styleClass="cssAdminHeader">
       <children>
