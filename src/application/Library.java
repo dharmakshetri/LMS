@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 
 import dataservice.UserDataAccess;
 
-public class Main extends Application {
+public class Library extends Application {
 	public static Stage loginStage;
 
 	@Override
@@ -18,11 +18,11 @@ public class Main extends Application {
 		try {
 			loginStage = primaryStage;
 			UserDataAccess obj = new UserDataAccess();
-			// obj.saveUser(new User("lib", "123", Role.LIBRARIAN));
-			// obj.saveUser(new User("admin", "123", Role.ADMIN));
+			obj.saveUser(new User("lib", "123", Role.LIBRARIAN));
+			obj.saveUser(new User("admin", "123", Role.ADMIN));
 			Parent root = FXMLLoader.load(getClass().getResource("/view/LogIn.fxml"));
 			Scene scene = new Scene(root, 650, 500);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("library.css").toExternalForm());
 			loginStage.setScene(scene);
 			loginStage.setTitle("LogIn");
 			loginStage.show();

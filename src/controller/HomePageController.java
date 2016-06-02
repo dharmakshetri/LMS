@@ -3,7 +3,7 @@ package controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import application.Main;
+import application.Library;
 import enums.Role;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,7 +54,7 @@ public class HomePageController implements Initializable {
 		try {
 			Pane root = FXMLLoader.load((getClass().getResource("/view/AddMember.fxml")));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);
 			stage.setTitle(" Member Add Form");
@@ -69,7 +69,7 @@ public class HomePageController implements Initializable {
 		try {
 			Pane root = FXMLLoader.load((getClass().getResource("/view/AddBook.fxml")));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);
 			stage.setTitle("Book Add Form");
@@ -84,7 +84,7 @@ public class HomePageController implements Initializable {
 		try {
 			Pane root = FXMLLoader.load((getClass().getResource("/view/AddBookCopy.fxml")));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);
 			stage.setTitle("BookCopy Add Form");
@@ -99,7 +99,7 @@ public class HomePageController implements Initializable {
 		try {
 			Pane root = FXMLLoader.load((getClass().getResource("/view/CheckOutRecord.fxml")));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 			Stage stage = new Stage();
 			stage.setScene(scene);
 			stage.setTitle("Checkout Book");
@@ -114,7 +114,7 @@ public class HomePageController implements Initializable {
 		if (Message.showConfirmDialog("Are you sure to logout?")) {
 			try {
 				btnSignOut.getScene().getWindow().hide();
-				Main main = new Main();
+				Library main = new Library();
 				Stage stage = new Stage();
 				main.start(stage);
 

@@ -35,19 +35,11 @@
         <Label layoutX="549.0" layoutY="62.0" prefWidth="25.306640625" text="*" />
         <Label layoutX="320.0" layoutY="213.0" prefWidth="25.306640625" text="*" />
         <Label layoutX="318.0" layoutY="161.0" prefWidth="25.306640625" text="*" />
-        <Pane layoutX="0.0" layoutY="409.0" prefHeight="31.0" prefWidth="629.9999389648438">
-          <children>
-            <Label layoutX="10.0" layoutY="8.0" text="Copyright @ Nepal Group 2: Library Management System">
-              <font>
-                <Font name="System Bold Italic" size="12.0" />
-              </font>
-            </Label>
-          </children>
-        </Pane>
+        
       </children>
     </Pane>
     <Label fx:id="lblWarning" layoutX="68.0" layoutY="350.0" prefHeight="46.0" prefWidth="149.0" textFill="#e13232" />
-    <Button fx:id="btnAdd" layoutX="263.0" layoutY="361.0" mnemonicParsing="false" onAction="#addMember" prefHeight="32.05078125" prefWidth="92.0" styleClass="cssBtn" text="Add Member" />
+    <Button fx:id="btnAdd" layoutX="263.0" layoutY="361.0" mnemonicParsing="false" onAction="#addMember" prefHeight="32.05078125" prefWidth="160.0" styleClass="cssBtn" text="Add Member" />
     <Pane layoutX="0.0" layoutY="0.0" prefHeight="50.0" prefWidth="629.9999000000025" styleClass="cssAdminHeader">
       <children>
         <Label layoutX="226.0" layoutY="13.0" styleClass="cssLblAdminHeader" text="Member Registration" textAlignment="CENTER" />

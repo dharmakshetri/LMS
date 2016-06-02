@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
+import bInterface.IBook;
+import common.Common;
 import dataservice.BookDataAccess;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ObservableValue;
@@ -55,24 +57,16 @@ public class AddBookCopyController {
 	ObservableList<Book> bookl = null;
 	Book book;
 	List<BookCopy> copies;
+	String tempISBN;
+	boolean flag=false;
 	public AddBookCopyController() {
 
 	}
 
 	@FXML
 	public void searchISBN(ActionEvent event) {
-		BookDataAccess memberDao = new BookDataAccess();
-		book = memberDao.serachUser(txtISBN.getText().trim());
-		if (book != null) {
-			copies = book.getCopies();
-			//taDisplay.setText(book.getTitle() + "\t" + copies.get(copies.size()-1).getCopyNum()+ "\t" + book.getISBN());
-	
-			taDisplay.setText("Book Title : " + book.getTitle() + "\n" + "Book Copies : "
-					+ copies.get(copies.size()-1).getCopyNum() + "\n" + "ISBN : " + book.getISBN());
-		
-		} else {
-			Message.showWarningDialog("Book Not Found!");
-		}
+		flag=true;
+		displayBook(flag);
 	}
 
 	public void addCopies(ActionEvent event) {
@@ -81,16 +75,46 @@ public class AddBookCopyController {
 			for (int i = 0; i < newNumberofCopies; i++) {
 				book.addCopy();
 			}	
-			
+			flag=false;
 			txtISBN.clear();
 			txtNumOfCopies.clear();
 			BookDataAccess memberDao = new BookDataAccess();
 			memberDao.updateBook(book);
 			System.out.println(book.getCopies().get(0).getCopyNum());
 			Message.showInformationDialog("Book Copy Successfully added");
+			displayBook(flag);
 			//BookDataAccess memberDao = new BookDataAccess();
 			//memberDao.saveUser(book);
 
+		}
+	}
+	
+	public void displayBook(boolean f){
+		String isbn;
+		System.out.println("f="+f);
+		if(f){
+			Common.bookISBN=txtISBN.getText().trim();
+		}else{
+			Common.bookISBN=Common.bookISBN;
+		}
+		
+		System.out.println("ISBN="+Common.bookISBN);
+		BookDataAccess memberDao = new BookDataAccess();
+		book = memberDao.serachUser(Common.bookISBN);
+		
+		
+		if (book != null) {
+			//Common.bookISBN=txtISBN.getText().trim();
+			copies = book.getCopies();
+			System.out.println("books Copies="+copies.get(copies.size()-1).getCopyNum() );
+			//taDisplay.setText(book.getTitle() + "\t" + copies.get(copies.size()-1).getCopyNum()+ "\t" + book.getISBN());
+	
+			taDisplay.setText("Book Title : " + book.getTitle() + "\n" + "Book Copies : "
+					+ copies.get(copies.size()-1).getCopyNum() + "\n" + "ISBN : " + book.getISBN());
+			flag=false;
+		
+		} else {
+			Message.showWarningDialog("Book Not Found!");
 		}
 	}
 

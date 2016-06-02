@@ -24,14 +24,6 @@
         <Label fx:id="welcomeLBL" layoutX="228.0" layoutY="180.0" text="Library Management System" />
       </children>
     </Pane>
-    <Pane layoutX="0.0" layoutY="454.0" prefHeight="31.0" prefWidth="629.9999389648438">
-      <children>
-        <Label layoutX="10.0" layoutY="8.0" text="Copyright @ Nepal Group 2: Library Management System">
-          <font>
-            <Font name="System Bold Italic" size="12.0" />
-          </font>
-        </Label>
-      </children>
-    </Pane>
+   
   </children>
 </Pane>

@@ -1,46 +1,48 @@
+/*CSS layout files*/
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
-.cssLoginPane{
+/* .cssLoginPane{
     -fx-background-image: url("/images/loginimage.jpg");
-}
-.cssLoginHeader{-fx-background-color: linear-gradient(#61a2b1, #2A5058);}
+}*/
+.cssLoginHeader{-fx-background-color: linear-gradient(#339933, #339933);}
 .cssLblLoginHeader{
 	-fx-font-size: 20.0px;
     -fx-font-weight: bold;
-    -fx-text-fill: #333333;
-    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,0.5) , 0.0,0.0,0.0,1.0 );
+    -fx-text-fill: #339933;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0) , 0.0,0.0,0.0,0.0 );
 }
 .cssLoginInner{
-	-fx-background-color: linear-gradient(#4D6257, #2A5058);
+	-fx-background-color: linear-gradient(#339933, #339933);
 }
 .cssHeader{
 	-fx-font-size: 20.0px;
     -fx-font-weight: bold;
-    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,0.5) , 0.0,0.0,0.0,1.0 );
+   
 }
 /*Admin Dashboard */
 .cssAdminHeader{
-	-fx-background-color: linear-gradient(#61a2b1, #2A5058);
+	-fx-background-color: linear-gradient(#339933, #339933);
 }
 .cssBtn,.cssBtnAdmin {
     -fx-text-fill: white;
     -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
-    -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 );
+    -fx-font-size:10;
+    -fx-background-color: linear-gradient(#009999, #33cccc);
+    
 }
 .cssBtn:hover,.cssBtnAdmin:hover {
-    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+    -fx-background-color: linear-gradient(#2A5058, #33cccc);
 }
-.cssAdminPaneLeft{-fx-background-color: linear-gradient(#4D6257, #2A5058);}
+.cssAdminPaneLeft{-fx-background-color: linear-gradient(#339933, #339933);}
 .cssLblAdminHeader{
 	-fx-font-size: 20.0px;
     -fx-font-weight: bold;
     -fx-text-fill: #333333;
-    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,0.5) , 0.0,0.0,0.0,1.0 );
+    
 }
 .cssAdminPane
 {
-	-fx-background-image: url("/images/adminbackground.jpg");
+	-fx-background-image: url("/images/mum.jpg");
 }
 /*Add member  */
 .cssLbl {

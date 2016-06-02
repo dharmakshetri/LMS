@@ -14,7 +14,7 @@
         <Font name="System Bold" size="18.0" />
       </font>
     </Label>
-    <Pane fx:id="headerPane" layoutX="134.0" layoutY="123.0" prefHeight="52.0" prefWidth="302.0" styleClass="cssLoginHeader">
+    <Pane fx:id="headerPane" layoutX="134.0" layoutY="123.0" prefHeight="52.0" prefWidth="400.0" styleClass="cssLoginHeader">
       <children>
         <Label layoutX="119.0" layoutY="18.0" styleClass="cssLblLoginHeader" text="LOG IN">
           <font>
@@ -23,7 +23,7 @@
         </Label>
       </children>
     </Pane>
-    <Pane fx:id="innerPane" layoutX="134.0" layoutY="175.0" minHeight="171.0" prefHeight="206.0" prefWidth="302.0" styleClass="cssLoginInner">
+    <Pane fx:id="innerPane" layoutX="134.0" layoutY="175.0" minHeight="171.0" prefHeight="206.0" prefWidth="400.0" styleClass="cssLoginInner">
       <children>
         <Label fx:id="username" layoutX="47.0" layoutY="40.0" text="Username:">
           <font>
@@ -33,18 +33,10 @@
         <Label fx:id="password" font="$x1" layoutX="47.0" layoutY="80.0" text="Password:" />
         <PasswordField fx:id="txtpassword" layoutX="144.0" layoutY="78.0" />
         <Button fx:id="btnLogIn" layoutX="144.0" layoutY="138.0" mnemonicParsing="false" onAction="#doLogIn" prefHeight="25.0" prefWidth="68.0" text="Log In" />
-        <Button fx:id="btncancel" layoutX="227.0" layoutY="138.0" mnemonicParsing="false" onAction="#doCancel" prefHeight="25.0" prefWidth="61.0" text="Cancel" />
+        <Button fx:id="btncancel" layoutX="227.0" layoutY="138.0" mnemonicParsing="false" onAction="#doCancel" prefHeight="25.0" prefWidth="80.0" text="Cancel" />
         <TextField fx:id="txtusername" layoutX="144.0" layoutY="38.0" />
       </children>
     </Pane>
-    <Pane layoutX="1.0" layoutY="428.0" prefHeight="31.0" prefWidth="629.9999389648438">
-      <children>
-        <Label layoutX="10.0" layoutY="8.0" text="Copyright @ Nepal Group 2: Library Management System" textFill="WHITE">
-          <font>
-            <Font name="System Bold Italic" size="12.0" />
-          </font>
-        </Label>
-      </children>
-    </Pane>
+   
   </children>
 </Pane>

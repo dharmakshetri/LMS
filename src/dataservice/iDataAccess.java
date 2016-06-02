@@ -13,7 +13,8 @@ import java.util.List;
 
 public class iDataAccess {
 	public static final String OUTPUT_DIR = System.getProperty("user.dir")
-			+ "\\src\\storage";
+			+ "//src//storage";
+	//+ "\\src\\storage"; for window
 	public static final String DATE_PATTERN = "MM/dd/yyyy";
 
 	protected <T> void save(List<T> list) {

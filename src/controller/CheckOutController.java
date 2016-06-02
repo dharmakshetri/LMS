@@ -103,8 +103,8 @@ public class CheckOutController {
 				&& (bda.serachUser(tf_ISBN.getText()) !=null)) {
 
 			cISBN.setCellValueFactory(new PropertyValueFactory<Book, String>("ISBN"));
-			cBookTitle.setCellValueFactory(new PropertyValueFactory<Book, String>("name"));
-			cAuthor.setCellValueFactory(new PropertyValueFactory<Book, String>("Author"));
+			cBookTitle.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
+			cAuthor.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
 			cAvailable.setCellValueFactory(new PropertyValueFactory<Book, Integer>("Available"));
 			cCheckout.setCellValueFactory(new PropertyValueFactory<Book, String>("Checkout"));
 
@@ -139,6 +139,7 @@ public class CheckOutController {
 		//int bcUniqueid=-1;
 		LibraryMember mem = mda.serachUser(tf_memberID.getText());
 		Book book = bda.serachUser(tf_ISBN.getText());
+		System.out.println("book.getCopies()="+book.getCopies().size());
 		for(BookCopy bc:book.getCopies()) {
 			if(bc.isAvailable()){
 				//bcUniqueid = bc.getCopyNum();

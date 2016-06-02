@@ -1,7 +1,7 @@
 package controller;
 
 import enums.Role;
-import application.Main;
+import application.Library;
 import dataservice.UserDataAccess;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -49,12 +49,12 @@ public class LogInController {
 					role = result.getRole();
 					Pane root = FXMLLoader.load((getClass().getResource("/view/homepage.fxml")));
 					Scene scene = new Scene(root);
-					scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+					scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
 					Stage stage = new Stage();
 					stage.setScene(scene);
-					stage.setTitle("Main Form");
+					stage.setTitle("HomePage");
 					stage.show();
-					Main.loginStage.close();
+					Library.loginStage.close();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

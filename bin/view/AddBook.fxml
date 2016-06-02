@@ -14,7 +14,7 @@
         <Pane layoutX="-6.0" layoutY="222.0" prefHeight="294.000022070315" prefWidth="650.0" styleClass="cssAuthorPane">
           <children>
             <Label layoutX="51.0" layoutY="-2.0" styleClass="cssLblHeader" text="Author Details" />
-            <Button fx:id="btnAddAuthor" layoutX="286.0" layoutY="189.0" minHeight="16.0001220703125" mnemonicParsing="false" onAction="#addAuthor" prefHeight="23.0001220703125" prefWidth="101.0" styleClass="cssBtn" text="Add Author" />
+            <Button fx:id="btnAddAuthor" layoutX="286.0" layoutY="189.0" minHeight="16.0001220703125" mnemonicParsing="false" onAction="#addAuthor" prefHeight="23.0001220703125" prefWidth="112.0" styleClass="cssBtn" text="Add Author" />
           </children>
         </Pane>
         <Pane layoutX="-6.0" layoutY="42.0" prefHeight="179.0" prefWidth="650.0" styleClass="cssBookPane">
@@ -59,14 +59,6 @@
     <Label layoutX="362.0" layoutY="303.0" styleClass="cssLbl" text="Street :" />
     <Label layoutX="363.0" layoutY="260.0" styleClass="cssLbl" text="City :" />
     <TextField fx:id="txtCity" layoutX="425.0" layoutY="256.0" prefHeight="31.0" promptText="City" />
-    <Pane layoutX="0.0" layoutY="517.0" prefHeight="31.0" prefWidth="629.9999389648438">
-      <children>
-        <Label layoutX="10.0" layoutY="8.0" text="Copyright @ Nepal Group 2: Library Management System">
-          <font>
-            <Font name="System Bold Italic" size="12.0" />
-          </font>
-        </Label>
-      </children>
-    </Pane>
+    
   </children>
 </Pane>
