@@ -6,24 +6,47 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 
-<Pane prefHeight="484.99980000000505" prefWidth="629.999800000005" styleClass="null" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.HomePageController">
-  <children>
-    <Pane layoutX="134.0" layoutY="48.0" prefHeight="415.999755859375" prefWidth="495.99981689453125" styleClass="cssAdminPane" />
-    <Pane layoutX="0.0" layoutY="0.0" prefHeight="48.00019999999495" prefWidth="629.9999168945287" styleClass="cssAdminHeader">
-      <children>
-        <Label layoutX="263.0" layoutY="11.0" styleClass="cssLblAdminHeader" text="Admin Dashboard" />
-      </children>
-    </Pane>
-    <Pane layoutX="0.0" layoutY="42.0" prefHeight="421.9997863769531" prefWidth="159.0" styleClass="cssAdminPaneLeft">
-      <children>
-        <Button fx:id="btnCheckOutBook" layoutX="22.0" layoutY="219.0" mnemonicParsing="false" onAction="#checkOutBook" prefHeight="31.0" prefWidth="109.00009999999747" styleClass="cssBtnAdmin" text="Check Out Book" />
-        <Button fx:id="btnAddMember" layoutX="24.0" layoutY="76.0" mnemonicParsing="false" onAction="#addMember" prefHeight="28.9609375" prefWidth="107.00009155273438" styleClass="cssBtnAdmin" text="Add Member" />
-        <Button fx:id="btnAddBook" layoutX="24.0" layoutY="122.0" mnemonicParsing="false" onAction="#addBook" prefHeight="28.9609375" prefWidth="107.00009155273438" styleClass="cssBtnAdmin" text="Add Book" />
-        <Button fx:id="btnAddBookCopy" layoutX="24.0" layoutY="168.0" mnemonicParsing="false" onAction="#addBookCopy" prefHeight="32.0" prefWidth="107.00010844726057" styleClass="cssBtnAdmin" text="Add BookCopy" />
-        <Button fx:id="btnSignOut" layoutX="22.0" layoutY="267.0" mnemonicParsing="false" onAction="#logout" prefHeight="28.9609375" prefWidth="109.00009155273438" styleClass="cssBtnAdmin" text="Sign Out" />
-        <Label fx:id="welcomeLBL" layoutX="228.0" layoutY="180.0" text="Library Management System" />
-      </children>
-    </Pane>
-   
-  </children>
+<Pane prefHeight="484.99980000000505" prefWidth="629.999800000005"
+	styleClass="null" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+	fx:controller="controller.HomePageController">
+	<children>
+		<Pane layoutX="134.0" layoutY="48.0" prefHeight="415.999755859375"
+			prefWidth="495.99981689453125" styleClass="cssAdminPane" />
+		<Pane layoutX="0.0" layoutY="0.0" prefHeight="48.00019999999495"
+			prefWidth="629.9999168945287" styleClass="cssAdminHeader">
+			<children>
+				<Label layoutX="263.0" layoutY="11.0" styleClass="cssLblAdminHeader"
+					text="Admin Dashboard" />
+			</children>
+		</Pane>
+		<Pane layoutX="0.0" layoutY="42.0" prefHeight="421.9997863769531"
+			prefWidth="180.0" styleClass="cssAdminPaneLeft">
+			<children>
+				<Label fx:id="welcomeLBL" layoutX="228.0" layoutY="180.0"
+					text="Library Management System" />
+				<Button fx:id="btnCheckOutBook" layoutX="22.0" layoutY="219.0"
+					mnemonicParsing="false" onAction="#checkOutBook" prefHeight="31.0"
+					prefWidth="109.00009999999747" styleClass="cssBtnAdmin" text="Check Out Book" />
+				<Button fx:id="btnAddMember" layoutX="24.0" layoutY="76.0"
+					mnemonicParsing="false" onAction="#addMember" prefHeight="28.9609375"
+					prefWidth="107.00009155273438" styleClass="cssBtnAdmin" text="Add Member" />
+				<Button fx:id="btnAddBook" layoutX="24.0" layoutY="122.0"
+					mnemonicParsing="false" onAction="#addBook" prefHeight="28.9609375"
+					prefWidth="107.00009155273438" styleClass="cssBtnAdmin" text="Add Book" />
+				<Button fx:id="btnAddBookCopy" layoutX="24.0" layoutY="168.0"
+					mnemonicParsing="false" onAction="#addBookCopy" prefHeight="32.0"
+					prefWidth="107.00010844726057" styleClass="cssBtnAdmin" text="Add BookCopy" />
+				<Button fx:id="btnRecord" layoutX="23.0" layoutY="26.0"
+					mnemonicParsing="false" onAction="#showRecords" prefHeight="28.9609375"
+					prefWidth="107.00009155273438" text="Record" styleClass="cssBtnAdmin" />
+				<Button fx:id="btnOverdue" layoutX="22.0" layoutY="266.0"
+					mnemonicParsing="false" onAction="#showOverdue" prefHeight="28.9609375"
+					prefWidth="107.00009155273438" text="Overdue" styleClass="cssBtnAdmin" />
+				<Button fx:id="btnSignOut" layoutX="22.0" layoutY="314.0"
+					mnemonicParsing="false" onAction="#logout" prefHeight="28.9609375"
+					prefWidth="109.00009155273438" styleClass="cssBtnAdmin" text="Sign Out" />
+			</children>
+		</Pane>
+
+	</children>
 </Pane>

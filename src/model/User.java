@@ -1,9 +1,10 @@
 package model;
 import java.io.Serializable;
 
+import bInterface.Roles;
 import enums.Role;
 
-public class User implements Serializable {
+public class User implements Roles, Serializable{
 	/**
 	 * 
 	 */
@@ -40,5 +41,12 @@ public class User implements Serializable {
 	}
 	public void setRole(Role role) {
 		this.role = role;
+	}
+	@Override
+	public void setRoles() {
+		// TODO Auto-generated method stub
+		System.out.println("Role set"+role );
+		//new User(userName, passWord, role)
+		
 	}
 }

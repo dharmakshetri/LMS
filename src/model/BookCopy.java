@@ -2,7 +2,7 @@ package model;
 
 import java.io.Serializable;
 
-public class BookCopy implements Serializable {
+public class BookCopy implements Serializable, Cloneable {
 	/**
 	 * 
 	 */
@@ -49,6 +49,10 @@ public class BookCopy implements Serializable {
 	public void setBook(Book book) {
 		this.book = book;
 	}
+	
+	protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
 //	public boolean isCheckedout() {
 //		return isCheckedout;

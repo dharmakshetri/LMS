@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import enums.Role;
+import factory.RoleFactory;
 import model.User;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,6 +13,7 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 
 import bInterface.OnLoginSuccessListener;
+import bInterface.Roles;
 import common.DataHelper;
 import controller.LogInController;
 import dataservice.UserDataAccess;
@@ -24,8 +26,15 @@ public class Library extends Application implements OnLoginSuccessListener {
 		try {
 			loginStage = primaryStage;
 			UserDataAccess obj = new UserDataAccess();
-			obj.saveUser(new User("lib", "123", Role.LIBRARIAN));
-			obj.saveUser(new User("admin", "123", Role.ADMIN));
+			
+			RoleFactory roleFacory= new RoleFactory();
+			User admin= (User) roleFacory.createRoles("admin");
+			User librain=(User)roleFacory.createRoles("librain");
+			
+			obj.saveUser(admin);
+			obj.saveUser(librain);
+			//obj.saveUser(new User("lib", "123", Role.LIBRARIAN));
+			//obj.saveUser(new User("admin", "123", Role.ADMIN));
 			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/LogIn.fxml"));
             Parent root = loader.load();

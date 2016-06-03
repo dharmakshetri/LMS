@@ -29,7 +29,10 @@ public class HomePageController implements Initializable {
 	private Button btnAddBookCopy;
 	@FXML
 	private Button btnSignOut;
-
+	@FXML
+	private Button btnRecord;
+	@FXML
+	private Button btnOverdue;
 	@FXML
 	private Label welcomeLBL;
 
@@ -50,6 +53,35 @@ public class HomePageController implements Initializable {
 
 	}
 
+	@FXML
+	protected void showRecords(ActionEvent event){
+		try {
+			Pane root = FXMLLoader.load((getClass().getResource("/view/Records.fxml")));
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.setTitle("Records");
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@FXML
+	protected void showOverdue(ActionEvent event){
+		try {
+			Pane root = FXMLLoader.load((getClass().getResource("/view/Overdue.fxml")));
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("/application/library.css").toExternalForm());
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.setTitle("Records");
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	@FXML
 	public void addMember() {
 		try {

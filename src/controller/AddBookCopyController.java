@@ -69,7 +69,7 @@ public class AddBookCopyController {
 		displayBook(flag);
 	}
 
-	public void addCopies(ActionEvent event) {
+	public void addCopies(ActionEvent event) throws CloneNotSupportedException {
 		if (book != null) {
 			int newNumberofCopies = Integer.parseInt(txtNumOfCopies.getText().trim());
 			for (int i = 0; i < newNumberofCopies; i++) {

@@ -91,7 +91,7 @@ public class AddBookController {
 	}
 
 	@FXML
-	void addBook(ActionEvent event) {
+	void addBook(ActionEvent event) throws NumberFormatException, CloneNotSupportedException {
 
 		Book book = new Book(txtTitle.getText(), txtISBN.getText(), Integer.parseInt(txtCheckOut.getText()),
 				Integer.parseInt(txtNoOfCopy.getText()), authorList);

@@ -15,4 +15,7 @@ public class DataHelper {
     public static final int WINDOW_HEIGHT =500;
     public static final int MAIN_WINDOW_WIDTH = 800;
     public static final int MAIN_WINDOW_HEIGHT = 600;
+    
+    public static final String  ROLE_ADMIN="admin";
+    public static final String ROLE_LIBRAIN="librain";
 }

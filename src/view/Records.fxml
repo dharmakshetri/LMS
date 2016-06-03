@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="484.0" prefWidth="721.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.RecordsController">
+  <children>
+    <Label layoutX="35.0" layoutY="59.0" text="Total Books:">
+      <font>
+        <Font name="System Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label fx:id="lblTotalBooks" layoutX="125.0" layoutY="59.0" prefWidth="59.0" text="">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Label>
+    <TableView fx:id="tbl_checkoutRecord" layoutX="35.0" layoutY="101.0" prefHeight="338.0" prefWidth="615.5">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="222.0" text="ISBN" fx:id="cISBN" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="476.0" text="Title" fx:id="cBookTitle" />
+      </columns>
+    </TableView>
+  </children>
+</Pane>

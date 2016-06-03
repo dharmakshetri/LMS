@@ -34,22 +34,25 @@ public class Book implements Serializable{
 
 	
 	public Book(String title, String isbn, int maxCheckoutLength,int numOfCopies,
-			List<Author> authorList) {
+			List<Author> authorList) throws CloneNotSupportedException {
 		int number=numOfCopies;
 		this.title=title;
 		this.isbn = isbn;
 		this.maxCheckoutLength=maxCheckoutLength;
 		this.authorList = authorList; 
 		BookCopy copy =new BookCopy(number,this,true);
-		copies.add(copy);
+		BookCopy cTemp = (BookCopy ) copy.clone();
+		this.copies.add(cTemp);
+		copies.add(cTemp);
 	}
 	
-	public void addCopy() {
+	public void addCopy() throws CloneNotSupportedException {
 		if(this.copies == null){
 			this.copies = new ArrayList<BookCopy>();
 		}
 		BookCopy c = new BookCopy(this.copies.size() + 1,this,true);
-		this.copies.add(c);
+		BookCopy cTemp = (BookCopy ) c.clone();
+		this.copies.add(cTemp);
 	}
 	public void updateBookCopyArray(BookCopy copy) {
 		for(int i = 0; i < copies.size(); ++i) {

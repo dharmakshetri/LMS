@@ -18,8 +18,14 @@ public class MemberDataAccess extends iDataAccess {
 				return member;
 		}
 		return null;
-		
+
 	}
+
+	public List<LibraryMember> getAllMembers(){
+		List<LibraryMember> allMembers = getAllItems();
+		return allMembers;
+	}
+
 	public void updateBook(LibraryMember member) {
 		List<LibraryMember> allMember = getAllItems();
 		for (int i=0;i<allMember.size();i++) {

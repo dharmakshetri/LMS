@@ -2,6 +2,7 @@ package dataservice;
 
 import java.util.List;
 
+import javafx.util.Callback;
 import model.Book;;
 
 public class BookDataAccess extends iDataAccess {
@@ -32,6 +33,11 @@ public class BookDataAccess extends iDataAccess {
 			}
 		}
 		save(allBook);
+	}
+
+	public List<Book> getAllBooks() {
+		List<Book> allBook= getAllItems();
+		return allBook;
 	}
 
 }
