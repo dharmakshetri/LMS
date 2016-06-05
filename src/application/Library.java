@@ -27,6 +27,7 @@ public class Library extends Application implements OnLoginSuccessListener {
 			loginStage = primaryStage;
 			UserDataAccess obj = new UserDataAccess();
 			
+			// calling factory class and create role
 			RoleFactory roleFacory= new RoleFactory();
 			User admin= (User) roleFacory.createRoles("admin");
 			User librain=(User)roleFacory.createRoles("librain");
